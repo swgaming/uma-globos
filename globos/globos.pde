@@ -27,8 +27,9 @@ ArrayList<Globo> globos;
 
 void setup()
 {
-  size(640,480);
+  size(800,600,P3D);
   globos = new ArrayList<Globo>();  
+  
 }
 
 void draw()
