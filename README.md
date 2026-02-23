@@ -1,5 +1,4 @@
 # Globos
 Repositorio para hacer pruebas con git
 
-
-PRUEBAAAA
+Estamos haciendo pruebas de git distribuido
