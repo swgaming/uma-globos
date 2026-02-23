@@ -2,3 +2,4 @@
 Repositorio para hacer pruebas con git
 
 Estamos haciendo pruebas de git distribuido
+nueva prueba conflicto
