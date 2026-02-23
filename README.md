@@ -2,4 +2,4 @@
 Repositorio para hacer pruebas con git
 
 
-PRUEBAAAA
+prueba de conflicto
