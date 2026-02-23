@@ -1,12 +1,14 @@
 class Globo
 {
-  float x, y,vx,vy;
+  float x, y, z, vx, vy;
+
   Globo (float _x, float _y)
   {
-   x=_x;
-   y=_y; 
-   vx=random(-0.25,0.25);
-   vy=random(-2,-0.5);
+    x=_x;
+    y=_y;
+    z=random(-200, 200);   // <-- NUEVO: profundidad
+    vx=random(-0.25, 0.25);
+    vy=random(-2, -0.5);
   }
 
   void update()
@@ -17,24 +19,29 @@ class Globo
 
   void dibujate()
   {
-      ellipse(x,y,100,100);
+    pushMatrix();
+    fill(255, 0, 0);      // <-- CAMBIO: col no estaba definido
+    translate(x, y, z);     // <-- CAMBIO: ahora sí es 3D
+    box(20);
+    popMatrix();
+    //rotateY(frameCount * 0.02);
+    //rotateX(frameCount * 0.01);
   }
-  
 }
 
 ArrayList<Globo> globos;
 
-
 void setup()
 {
-  size(640,480);
-  globos = new ArrayList<Globo>();  
+  size(800, 600, P3D);
+  globos = new ArrayList<Globo>();
 }
 
 void draw()
 {
-  background(0);
-  for(int i=0;i<globos.size();i++)
+  background(174, 212, 242);
+  lights();
+  for (int i=0; i<globos.size(); i++)
   {
     globos.get(i).update();
     globos.get(i).dibujate();
@@ -43,5 +50,5 @@ void draw()
 
 void mousePressed()
 {
-  globos.add(new Globo(mouseX,mouseY));
+  globos.add(new Globo(mouseX, mouseY));
 }

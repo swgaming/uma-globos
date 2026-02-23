@@ -1,5 +1,5 @@
 # Globos
 Repositorio para hacer pruebas con git
 
-
-prueba de conflicto
+Estamos haciendo pruebas de git distribuido
+nueva prueba conflicto
